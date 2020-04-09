@@ -46,10 +46,11 @@ public class FlowRuleNacosPublisher implements DynamicRulePublisher<List<FlowRul
         if (rules == null) {
             return;
         }
+        //APP1-flow-rules
         configService.publishConfig(app + NacosConfigUtil.FLOW_DATA_ID_POSTFIX,
                 NacosConfigUtil.GROUP_ID, converter.convert(rules));
 
-       /* configService.publishConfig(app + FLOW_DATA_ID_POSTFIX,
+        /*configService.publishConfig(app + FLOW_DATA_ID_POSTFIX,
                 GROUP_ID, converter.convert(rules));*/
     }
 }
