@@ -29,20 +29,20 @@ import java.util.List;
  * @author Eric Zhao
  * @since 1.4.0
  */
-@Configuration
+//@Configuration
 public class NacosConfig {
 
-    @Bean
+    //@Bean
     public Converter<List<FlowRuleEntity>, String> flowRuleEntityEncoder() {
         return JSON::toJSONString;
     }
 
-    @Bean
+    //@Bean
     public Converter<String, List<FlowRuleEntity>> flowRuleEntityDecoder() {
         return s -> JSON.parseArray(s, FlowRuleEntity.class);
     }
 
-    @Bean
+    //@Bean
     public ConfigService nacosConfigService() throws Exception {
         return ConfigFactory.createConfigService("localhost");
     }

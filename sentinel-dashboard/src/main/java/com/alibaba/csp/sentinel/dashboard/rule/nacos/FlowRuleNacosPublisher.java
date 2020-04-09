@@ -37,6 +37,9 @@ public class FlowRuleNacosPublisher implements DynamicRulePublisher<List<FlowRul
     @Autowired
     private Converter<List<FlowRuleEntity>, String> converter;
 
+    public static final String FLOW_DATA_ID_POSTFIX = "-sentinel";
+    public static final String GROUP_ID = "DEFAULT_GROUP";
+
     @Override
     public void publish(String app, List<FlowRuleEntity> rules) throws Exception {
         AssertUtil.notEmpty(app, "app name cannot be empty");
@@ -45,5 +48,8 @@ public class FlowRuleNacosPublisher implements DynamicRulePublisher<List<FlowRul
         }
         configService.publishConfig(app + NacosConfigUtil.FLOW_DATA_ID_POSTFIX,
                 NacosConfigUtil.GROUP_ID, converter.convert(rules));
+
+       /* configService.publishConfig(app + FLOW_DATA_ID_POSTFIX,
+                GROUP_ID, converter.convert(rules));*/
     }
 }

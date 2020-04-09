@@ -42,13 +42,13 @@ public class FlowQpsDemo {
 
     private static volatile boolean stop = false;
 
-    private static final int threadCount = 32;
+    private static final int threadCount = 1;
 
     private static int seconds = 60 + 40;
 
     public static void main(String[] args) throws Exception {
         initFlowQpsRule();
-
+        // 检测
         tick();
         // first make the system run on a very low condition
         simulateTraffic();
