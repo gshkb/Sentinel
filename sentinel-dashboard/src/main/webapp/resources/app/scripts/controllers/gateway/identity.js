@@ -53,6 +53,7 @@ app.controller('GatewayIdentityCtl', ['$scope', '$stateParams', 'IdentityService
 
     var gatewayFlowRuleDialog;
     var gatewayFlowRuleDialogScope;
+    // 网关控流
     $scope.addNewGatewayFlowRule = function (resource) {
       if (!$scope.macInputModel) {
         return;

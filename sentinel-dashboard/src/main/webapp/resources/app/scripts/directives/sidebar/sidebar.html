@@ -50,42 +50,43 @@
           </li>
           <li ui-sref-active="active" ng-if="entry.isGateway">
             <a ui-sref="dashboard.gatewayFlow({app: entry.app})">
-              <i class="glyphicon glyphicon-filter"></i>&nbsp;&nbsp;流控规则</a>
+              <i class="glyphicon glyphicon-filter"></i>&nbsp;&nbsp;流控规则（网关）</a>
           </li>
 
           <li ui-sref-active="active" ng-if="!entry.isGateway">
             <!--<a ui-sref="dashboard.flowV1({app: entry.app})">-->
-            <a ui-sref="dashboard.flow({app: entry.app})">
-              <i class="glyphicon glyphicon-filter"></i>&nbsp;&nbsp;流控规则</a>
-          </li>
+              <a ui-sref="dashboard.flow({app: entry.app})">
+            <!--<a ui-sref="dashboard.flowV2({app: entry.app})">-->
+            <i class="glyphicon glyphicon-filter"></i>&nbsp;&nbsp;流控规则（非网关）</a>
+        </li>
 
-          <li ui-sref-active="active">
-            <a ui-sref="dashboard.degrade({app: entry.app})">
-              <i class="glyphicon glyphicon-flash"></i>&nbsp;&nbsp;降级规则</a>
-          </li>
-          <li ui-sref-active="active" ng-if="!entry.isGateway">
-            <a ui-sref="dashboard.paramFlow({app: entry.app})">
-              <i class="glyphicon glyphicon-fire"></i>&nbsp;&nbsp;热点规则</a>
-          </li>
-          <li ui-sref-active="active">
-            <a ui-sref="dashboard.system({app: entry.app})">
-              <i class="glyphicon glyphicon-lock"></i>&nbsp;&nbsp;系统规则</a>
-          </li>
-          <li ui-sref-active="active" ng-if="!entry.isGateway">
-            <a ui-sref="dashboard.authority({app: entry.app})">
-              <i class="glyphicon glyphicon-check"></i>&nbsp;&nbsp;授权规则</a>
-          </li>
-          <li ui-sref-active="active" ng-if="!entry.isGateway">
-            <a ui-sref="dashboard.clusterAppServerList({app: entry.app})">
-              <i class="glyphicon glyphicon-cloud"></i>&nbsp;&nbsp;集群流控</a>
-          </li>
+        <li ui-sref-active="active">
+          <a ui-sref="dashboard.degrade({app: entry.app})">
+            <i class="glyphicon glyphicon-flash"></i>&nbsp;&nbsp;降级规则</a>
+        </li>
+        <li ui-sref-active="active" ng-if="!entry.isGateway">
+          <a ui-sref="dashboard.paramFlow({app: entry.app})">
+            <i class="glyphicon glyphicon-fire"></i>&nbsp;&nbsp;热点规则</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="dashboard.system({app: entry.app})">
+            <i class="glyphicon glyphicon-lock"></i>&nbsp;&nbsp;系统规则</a>
+        </li>
+        <li ui-sref-active="active" ng-if="!entry.isGateway">
+          <a ui-sref="dashboard.authority({app: entry.app})">
+            <i class="glyphicon glyphicon-check"></i>&nbsp;&nbsp;授权规则</a>
+        </li>
+        <li ui-sref-active="active" ng-if="!entry.isGateway">
+          <a ui-sref="dashboard.clusterAppServerList({app: entry.app})">
+            <i class="glyphicon glyphicon-cloud"></i>&nbsp;&nbsp;集群流控</a>
+        </li>
 
-          <li ui-sref-active="active">
-            <a ui-sref="dashboard.machine({app: entry.app})">
-              <i class="glyphicon glyphicon-th-list"></i>&nbsp;&nbsp;机器列表</a>
-          </li>
-        </ul>
-        <!-- /.nav-second-level -->
+        <li ui-sref-active="active">
+          <a ui-sref="dashboard.machine({app: entry.app})">
+            <i class="glyphicon glyphicon-th-list"></i>&nbsp;&nbsp;机器列表</a>
+        </li>
+      </ul>
+      <!-- /.nav-second-level -->
       </li>
     </ul>
   </div>
